@@ -180,14 +180,14 @@ export default function ContactSection() {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="title" className="block text-sm font-medium mb-2">
+                                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
                                         Subject
                                     </label>
                                     <input
                                         type="text"
-                                        id="title"
-                                        name="title"
-                                        value={formData.title}
+                                        id="subject"
+                                        name="subject"
+                                        value={formData.subject}
                                         onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none transition-colors"
