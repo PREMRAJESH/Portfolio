@@ -54,7 +54,7 @@ export default function GoalsSection() {
                         </h2>
                         <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full mb-6" />
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                            Driven by ambition and passion for technology. Here's what I'm working towards.
+                            Driven by ambition and passion for technology. Here&apos;s what I&apos;m working towards.
                         </p>
                     </div>
                 </ScrollReveal>
@@ -92,8 +92,8 @@ export default function GoalsSection() {
                                     understands systems, solves problems creatively, and delivers real value.
                                 </p>
                                 <p className="leading-relaxed">
-                                    Technology inspires me because it's where <span className="text-blue-400 font-semibold">creativity meets logic</span>,
-                                    ideas become reality, and one person's code can impact millions.
+                                    Technology inspires me because it&apos;s where <span className="text-blue-400 font-semibold">creativity meets logic</span>,
+                                    ideas become reality, and one person&apos;s code can impact millions.
                                 </p>
                                 <p className="leading-relaxed text-2xl font-bold text-foreground mt-8">
                                     Not just building software — building the future. 🚀

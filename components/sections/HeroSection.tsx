@@ -71,7 +71,7 @@ export default function HeroSection() {
                         transition={{ duration: 0.8 }}
                     >
                         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-shadow">
-                            Hi, I'm{" "}
+                            Hi, I&apos;m{" "}
                             <span className="gradient-text-blue">P.R.S</span>
                         </h1>
                     </motion.div>

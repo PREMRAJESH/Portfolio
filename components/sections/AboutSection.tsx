@@ -75,7 +75,7 @@ export default function AboutSection() {
 
                             <p className="text-lg leading-relaxed text-muted-foreground">
                                 I enjoy solving problems, understanding systems deeply, and building products that actually help people.
-                                Technology excites me because it's where <span className="text-blue-400 font-semibold">creativity meets logic</span> —
+                                Technology excites me because it&apos;s where <span className="text-blue-400 font-semibold">creativity meets logic</span> —
                                 where ideas turn into reality.
                             </p>
                         </div>

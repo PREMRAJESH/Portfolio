@@ -101,7 +101,7 @@ export default function ContactSection() {
                         <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full mb-6" />
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                             Looking for opportunities, collaborations, or just want to say hi?
-                            I'd love to hear from you!
+                            I&apos;d love to hear from you!
                         </p>
                     </div>
                 </ScrollReveal>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                     {/* Contact Methods */}
                     <ScrollReveal direction="left">
                         <div className="space-y-6">
-                            <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+                            <h3 className="text-2xl font-bold mb-6">Let&apos;s Connect</h3>
 
                             {contactMethods.map((method, index) => (
                                 <motion.a
@@ -191,7 +191,7 @@ export default function ContactSection() {
                                         onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-blue-500 focus:outline-none transition-colors"
-                                        placeholder="What's this about?"
+                                        placeholder="What&apos;s this about?"
                                     />
                                 </div>
 
@@ -235,7 +235,7 @@ export default function ContactSection() {
                                         animate={{ opacity: 1, y: 0 }}
                                         className="p-4 rounded-lg bg-green-500/20 border border-green-500/50 text-green-400 text-center"
                                     >
-                                        Message sent successfully! I'll get back to you soon.
+                                        Message sent successfully! I&apos;ll get back to you soon.
                                     </motion.div>
                                 )}
                             </div>
