@@ -24,7 +24,8 @@ export default function ParticleBackground() {
         }> = [];
 
         // Create particles
-        for (let i = 0; i < 50; i++) {
+        const particleCount = window.innerWidth < 768 ? 20 : 40;
+        for (let i = 0; i < particleCount; i++) {
             particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,

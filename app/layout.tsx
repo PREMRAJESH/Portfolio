@@ -32,8 +32,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="dark">
-            <body className={`${inter.className} antialiased custom-scrollbar`}>
+        <html lang="en" className="dark" suppressHydrationWarning>
+            <body className={`${inter.className} antialiased custom-scrollbar`} suppressHydrationWarning>
                 {children}
             </body>
         </html>

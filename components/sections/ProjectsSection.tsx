@@ -68,7 +68,7 @@ export default function ProjectsSection() {
             contribution: "Built the entire platform including the code editor, runtime visualizer, and algorithm step engine.",
             techStack: ["React", "Next.js", "TypeScript", "Monaco Editor", "Framer"],
             image: "🧩",
-            video: "/demos/codeviz_demo.mp4",
+
             liveLink: "https://code-visualizer.vercel.app/",
             githubLink: "https://github.com/PREMRAJESH/CodeViz",
             gradient: "from-pink-600 to-purple-600",
@@ -101,7 +101,7 @@ export default function ProjectsSection() {
                                 <div className="grid md:grid-cols-2 gap-8 p-8">
                                     {/* Project Visual */}
                                     <div className="relative h-full min-h-[250px] md:min-h-[300px]">
-                                        {project.video ? (
+                                        {/* {project.video ? (
                                             <div className="absolute inset-0 rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-500">
                                                 <video
                                                     src={project.video}
@@ -111,10 +111,8 @@ export default function ProjectsSection() {
                                                     playsInline
                                                     className="w-full h-full object-cover"
                                                 />
-                                                {/* Overlay */}
                                                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
 
-                                                {/* Hover Actions Overlay */}
                                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-10">
                                                     <a
                                                         href={project.liveLink}
@@ -134,40 +132,40 @@ export default function ProjectsSection() {
                                                     </a>
                                                 </div>
                                             </div>
-                                        ) : (
-                                            <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500`}>
-                                                {(project.image.startsWith('/') || project.image.startsWith('http')) ? (
-                                                    <img
-                                                        src={project.image}
-                                                        alt={project.title}
-                                                        className="w-full h-full object-cover"
-                                                    />
-                                                ) : (
-                                                    <span className="relative z-10 text-8xl">{project.image}</span>
-                                                )}
-                                                <div className="absolute inset-0 bg-black/20" />
+                                        ) : ( */}
+                                        <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500`}>
+                                            {(project.image.startsWith('/') || project.image.startsWith('http')) ? (
+                                                <img
+                                                    src={project.image}
+                                                    alt={project.title}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            ) : (
+                                                <span className="relative z-10 text-8xl">{project.image}</span>
+                                            )}
+                                            <div className="absolute inset-0 bg-black/20" />
 
-                                                {/* Overlay on hover */}
-                                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                                                    <a
-                                                        href={project.liveLink}
-                                                        className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        <ExternalLink className="w-6 h-6" />
-                                                    </a>
-                                                    <a
-                                                        href={project.githubLink}
-                                                        className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        <Github className="w-6 h-6" />
-                                                    </a>
-                                                </div>
+                                            {/* Overlay on hover */}
+                                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                                                <a
+                                                    href={project.liveLink}
+                                                    className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <ExternalLink className="w-6 h-6" />
+                                                </a>
+                                                <a
+                                                    href={project.githubLink}
+                                                    className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <Github className="w-6 h-6" />
+                                                </a>
                                             </div>
-                                        )}
+                                        </div>
+                                        {/* )} */}
 
                                         {/* Glow effect */}
                                         <div className={`absolute -inset-4 bg-gradient-to-br ${project.gradient} opacity-20 blur-2xl -z-10 group-hover:opacity-40 transition-opacity`} />

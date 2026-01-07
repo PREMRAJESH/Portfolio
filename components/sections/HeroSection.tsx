@@ -13,6 +13,7 @@ export default function HeroSection() {
     const [isDeleting, setIsDeleting] = useState(false);
     const [loopNum, setLoopNum] = useState(0);
     const [typingSpeed, setTypingSpeed] = useState(150);
+    const [show3D, setShow3D] = useState(false);
 
     const roles = [
         "Software Engineering Student & Developer",
@@ -21,6 +22,12 @@ export default function HeroSection() {
         "Cloud Explorer",
         "Problem Solver",
     ];
+
+    useEffect(() => {
+        // Defer 3D scene load to improve initial interaction performance (INP)
+        const timer = setTimeout(() => setShow3D(true), 2000);
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         const handleTyping = () => {
@@ -58,24 +65,18 @@ export default function HeroSection() {
             {/* Grid overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px]" />
 
-            {/* 3D Scene Background */}
-            <div className="absolute inset-0 z-0 opacity-50 pointer-events-none">
-                <Scene3D />
+            {/* 3D Scene Background - Lazy Loaded */}
+            <div className={`absolute inset-0 z-0 transition-opacity duration-1000 pointer-events-none ${show3D ? 'opacity-50' : 'opacity-0'}`}>
+                {show3D && <Scene3D />}
             </div>
 
             <div className="container-custom relative z-10 section-padding text-center">
-                <ScrollReveal>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-shadow">
-                            Hi, I&apos;m{" "}
-                            <span className="gradient-text-blue">P.R.S</span>
-                        </h1>
-                    </motion.div>
-                </ScrollReveal>
+                <div className="animate-fade-in-up">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-shadow">
+                        Hi, I&apos;m{" "}
+                        <span className="gradient-text-blue">P.R.S</span>
+                    </h1>
+                </div>
 
                 <ScrollReveal delay={0.2}>
                     <div className="h-20 md:h-24 mb-8">
